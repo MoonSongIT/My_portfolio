@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO 관련된 meta 정보임 -->
@@ -26,30 +26,32 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div>
-            <img src="images/favicon.ico" alt="logo">
-            <h1><a href="#">Moon Song&#39;s blog</a></h1>
+    <header class="header">
+        <div class="header__logo">
+            <img class ="header__logo__img" src="images/favicon.ico" alt="logo">
+            <h1 class="header__logo__title"><a href="#">Moon Song&#39;s blog</a></h1>
         </div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#works">My Works</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <ul class="header__menu">
+                <li><a class="header__menu__item active" href="#home">Home</a></li>
+                <li><a class="header__menu__item" href="#about">About</a></li>
+                <li><a class="header__menu__item" href="#skills">Skills</a></li>
+                <li><a class="header__menu__item" href="#works">My Works</a></li>
+                <li><a class="header__menu__item" href="#testimonials">Testimonials</a></li>
+                <li><a class="header__menu__item" href="#contact">Contact</a></li>
+            </ul>class="header_menu_item" 
         </nav>
     </header>
     <!-- main -->
-    <main></main>
+    <main>
         <!-- Home -->
         <section id="home">
-            <img src="images/profile.png" alt="moonsong's profile image">
-            <h2>Hello I&#39;m AI tool engineer who helps domain experts to complete the project</h2>
-            <p>I am a senior engineer who lives in Seoul and helps mid-sized companies complete process innovation using the open AI platform.</p>
-            <a href="#contact">Contact me</a>
+            <img class="home__avatar" src="images/profile.png" alt="moonsong's profile image">
+            <h2 class="home__title">Hello I&#39;m AI tool engineer who <br />
+                <strong class="home__title--strong">helps domain experts </strong> to complete the project
+            </h2>
+            <p class="home__description">I am a senior engineer who lives in Seoul and helps mid-sized companies complete process innovation using the open AI platform.</p>
+            <a class="home__contact" href="#contact">Contact me</a>
         </section>
         <!-- About -->
         <section id="about">
@@ -266,6 +268,8 @@
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
         </aside>
+
+    </main>
     <!-- footer -->
     <footer id="contact">
         <h2>Let&#39;s talk</h2>
