@@ -5,7 +5,7 @@
     --color-primary-variant:var(--color-gray);
     --color-accent:var(--color-blue);
     --color-accent-variant:var(--color-orange);
-    --color-text:var(--color-text);
+    --color-text:var(--color-white);
 
     /* Colors */
     --color-white: #ffffff;
@@ -19,6 +19,7 @@
 }
 body {
     font-family: 'Open sans' , sans-serif;
+    margin: 0;
 
 }
 h1,h2,h3,p,ul {
@@ -31,7 +32,7 @@ ul {
 }
 a {
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-white);
 }
 button{
     background-color: transparent;
@@ -40,4 +41,81 @@ button{
 }
 button:focus {
     outline: 1px solid var(--color-accent);
+}
+/* Header */
+.header{
+    background-color: #050a13;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+.header__logo__img{
+    width: 36px;
+    height: 36px;
+}
+.header__logo__title{
+    font-size: 1.8rem;
+}
+.header__menu{
+    display: flex;
+    gap: 4px;
+}
+.header__menu__item{
+    padding: 8px 16px;
+}
+.header__menu__item:hover{
+    border-bottom: 1px solid var(--color-accent);
+}
+.header__menu__item.active {
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+}
+/* Home */
+#home { 
+ background-color: var(--color-primary);
+ color: var(--color-text);
+ padding: 5rem 1rem;
+ padding-top: 7rem;
+ text-align: center;
+}
+.home__avatar{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20%;
+    border: 3px solid var(--color-accent);
+}
+.home__title--strong{
+    color: var(--color-accent);
+}
+.home__title{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.home__description {
+    font-size: 1.3rem;
+}
+.home__contact{
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    padding: 0.5rem 1rem;
+    margin: 2rem;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.home__contact:hover {
+    background-color: transparent;
+    color: var(--color-text);
+    outline: 2px solid var(--color-accent);
 }
