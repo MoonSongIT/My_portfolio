@@ -1,3 +1,4 @@
+'use strict';
 
 const header = document.querySelector('.header');
 const home = document.querySelector('#home');
