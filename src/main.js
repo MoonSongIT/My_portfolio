@@ -26,6 +26,14 @@ function scrollEvent (){
     else {
         arrowUp.style.opacity = 1;
     }
-
-
 }
+const navBarMenu = document.querySelector('.header__menu');
+const navBarToggle = document.querySelector('.header__toggle');
+
+navBarToggle.addEventListener('click', ()=>{
+    navBarMenu.classList.toggle('open');
+});
+// navBarMenu click 시 메뉴 닫아주기
+navBarMenu.addEventListener('click', ()=>{
+    navBarMenu.classList.remove('open');
+});
