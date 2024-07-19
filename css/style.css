@@ -2,14 +2,15 @@
 :root {
     /* App Color */
     --color-primary: var(--color-black);
-    --color-primary-variant:var(--color-gray);
-    --color-accent:var(--color-blue);
+    --color-primary-variant: var(--color-gray);
+    --color-accent: var(--color-blue-varia);
     --color-accent-variant:var(--color-orange);
     --color-text:var(--color-white);
 
     /* Colors */
     --color-white: #ffffff;
-    --color-blue: #03e8f9;
+    --color-blue: #3aafd2;
+    --color-blue-varia: #bec1f1;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
     --color-black: #050a13;
@@ -64,7 +65,7 @@ button:focus {
 
 /* Header */
 .header{
-    background-color: #050a13;
+    background-color: transparent;
     position: fixed;
     top: 0;
     width: 100%;
@@ -73,6 +74,12 @@ button:focus {
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+    box-shadow: 5px 5px 0px 0px rgba(109,40,217);
+    transition: all 300ms ease;
+}
+.header--dark {
+    background-color: var(--color-primary);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .header__logo {
     display: flex;
@@ -112,6 +119,7 @@ button:focus {
 .home__avatar{
     width: 250px;
     height: 250px;
+    margin: 1rem;
     object-fit: cover;
     border-radius: 20%;
     border: 3px solid var(--color-accent);
@@ -143,11 +151,12 @@ button:focus {
 /* About  */
 .majors {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 1rem;
     margin: 2.5rem 0;
 }
 .major {
+    flex: 1 1 0;
     background-color: var(--color-primary-variant);
     padding: 2rem 1rem;
     color: var(--color-text);
@@ -331,10 +340,10 @@ button:focus {
     align-items: center;
     margin-bottom: 2rem;
 }
-.testimonial:nth-child(even) .testimonial_img {
+.testimonial:nth-child(even) .testimonial__img {
     order: 1;
 }
-.testimonial_img {
+.testimonial__img {
     width: 150px;
     height: 150px;
     border-radius: 100%;
@@ -383,4 +392,75 @@ button:focus {
 }
 .contact__link:hover {
     color: var(--color-accent);
+}
+@media screen and (max-width: 768px) {
+   .section {
+    padding: 3rem  2rem;
+   }
+   .header__logo__title{
+    font-size: 1.2rem;
+}
+   .title {
+    font-size: 2rem;
+   }
+   .description {
+    font-size: 1rem;
+   }
+   .header {
+    flex-direction: column;
+    align-items: start;
+   }
+   .header__menu {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 4rem;
+    gap: 1rem;
+   }
+   .header_nav {
+        width: 100%;
+   }
+   #home {
+    padding-bottom: 3rem;
+   }
+   .home__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+   }
+   .majors {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+   }
+   .major {
+    /* max-width: 25rem; */
+    width: 100%;
+   }
+   .job {
+    justify-content: center;
+   }
+   .skills {
+    grid-template-columns: 1fr;
+   }
+   .categories {
+    flex-direction: column;
+   }
+   .category {
+    width: 100%;
+   }
+   .projects {
+    grid-template-columns: repeat(2, 1fr);
+   }
+   .testimonial {
+    flex-direction: column;
+   }
+   .testimonial:nth-child(even) .testimonial__img {
+    order: 0;
+   }
+   .arrow-up {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+   }
 }
