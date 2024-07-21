@@ -12,21 +12,15 @@ document.addEventListener('scroll', ()=> {
 });
 
 function scrollEvent (){
-    if (window.scrollY > headerHeight) {
-        header.classList.add('header--dark');
-        home.style.opacity = 0;
+       // 헤더 스타일 변경
+       header.classList.toggle('header--dark', window.scrollY > homeHeight);
 
-    } else {
-        header.classList.remove('header--dark');
-        home.style.opacity = 1 - (window.scrollY / headerHeight);
-    }
-   // console.log(`window.scroll:${window.scrollY}  homeHeight / 2: ${ homeHeight / 2} `)
-    if (window.scrollY < homeHeight / 2){
-        arrowUp.style.opacity = 0;
-    }
-    else {
-        arrowUp.style.opacity = 1;
-    }
+       // home 섹션의 opacity 부드럽게 조절
+       const opacity = Math.max(0, 1 - (window.scrollY / (homeHeight * 1.5)));
+       home.style.opacity = opacity;
+   
+       // arrow-up 버튼 표시 여부
+       arrowUp.style.opacity = window.scrollY > homeHeight * 0.5 ? 1 : 0;
 }
 const navBarMenu = document.querySelector('.header__menu');
 const navBarToggle = document.querySelector('.header__toggle');
