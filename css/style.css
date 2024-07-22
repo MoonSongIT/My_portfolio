@@ -124,11 +124,33 @@ button:focus {
 }
 /* Home */
 #home { 
- background-color: var(--color-primary);
- color: var(--color-text);
- padding: 5rem 1rem;
- padding-top: 7rem;
- text-align: center;
+    position: relative;
+    background-color: var(--color-primary);
+    background: linear-gradient(175deg, rgba(12,5,164,1) 0%, rgba(3,33,40,1) 100%);   
+     color: var(--color-text);
+    padding: 5rem 1rem;
+    padding-top: 7rem;
+    text-align: center;
+}
+.home__devider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.home__devider svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 75px;
+}
+
+.home__devider .shape-fill {
+    fill: #FFFFFF;
 }
 .home__avatar{
     width: 250px;
@@ -210,8 +232,29 @@ button:focus {
 }
 /* Skills */
 #skills {
+    position: relative;
     background-color: var(--color-primary-variant);
     color: var(--color-text);
+}
+.skills__divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.skills__divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 155px;
+}
+
+.skills__divider .shape-fill {
+    fill: var(--color-primary);
 }
 .skills {
     display: grid;
@@ -339,7 +382,7 @@ button:focus {
     opacity: 0.8;
     transform: translateY(0px);
 }
-.project__title:after {
+.project__title::after {
     content: '';
     display: block;
     position: relative;
@@ -397,9 +440,29 @@ button:focus {
 
 /* Footer */
 #contact {
+    position: relative;
     background-color: var(--color-primary);
     color: var(--color-text);
 }
+.footer__divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer__divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 53px;
+}
+.footer__divider .shape-fill {
+    fill: #FFFFFF;
+}
+
 .contact__links {
     display: flex;
     justify-content: center;
